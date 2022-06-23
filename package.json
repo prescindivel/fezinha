@@ -25,8 +25,9 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "prepare": "husky install",
-    "release": "standard-version --no-verify",
-    "postrelease": "git push --tags --no-verify"
+    "prerelease": "yarn lint && yarn test && yarn build",
+    "postrelease": "git push origin main --follow-tags",
+    "release": "standard-version --no-verify"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
