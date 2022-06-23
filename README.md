@@ -10,4 +10,4 @@ $ npx fezinha
 
 ---
 
-código implementado por @mvessaro8 nesse [gist](https://gist.github.com/mvessaro8/3e42b434ff261034185e225331bf0b49)
+código implementado por [@mvessaro8](https://github.com/mvessaro8) nesse [gist](https://gist.github.com/mvessaro8/3e42b434ff261034185e225331bf0b49)
