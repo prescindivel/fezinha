@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+import { getRandomInteger } from './utils/getRandomInteger'
+
 interface Lottery {
   size: number
   max: number
@@ -15,18 +17,14 @@ const MEGA: Lottery = {
   max: 60,
 }
 
-const getRndInteger = (min: number, max: number): number => {
-  return Math.floor(Math.random() * (max - min + 1)) + min
-}
-
-const draw = (lottery: Lottery) => {
+const draw = ({ size, max }: Lottery) => {
   const bet: number[] = []
 
-  for (let index = 0; index < lottery.size; index++) {
-    let drawnNumber = getRndInteger(1, lottery.max)
+  for (let index = 0; index < size; index++) {
+    let drawnNumber = getRandomInteger({ max })
 
     while (bet.includes(drawnNumber)) {
-      drawnNumber = getRndInteger(1, lottery.max)
+      drawnNumber = getRandomInteger({ max })
     }
 
     bet.push(drawnNumber)
