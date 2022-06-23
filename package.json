@@ -24,10 +24,7 @@
     "lint": "eslint ./src/**/*.ts --fix",
     "test": "jest",
     "test:watch": "jest --watch",
-    "prepare": "husky install",
-    "prerelease": "yarn lint && yarn test && yarn build",
-    "postrelease": "git push origin main --follow-tags",
-    "release": "standard-version --no-verify"
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
@@ -49,7 +46,6 @@
     "parcel": "^2.5.0",
     "prettier": "2.6.2",
     "rimraf": "^3.0.2",
-    "standard-gi": "^9.3.2",
     "ts-jest": "^27.1.4",
     "ts-node": "^10.7.0",
     "typescript": ">=3.0.0"
