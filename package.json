@@ -1,0 +1,56 @@
+{
+  "name": "fezinha",
+  "version": "0.0.0",
+  "source": "./src/index.ts",
+  "bin": {
+    "fezinha": "dist/index.js"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "files": [
+    "dist"
+  ],
+  "author": {
+    "name": "Victor Martins",
+    "email": "victorfrontend@gmail.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "rimraf .parcel-cache coverage dist",
+    "build": "parcel build",
+    "watch": "parcel watch",
+    "format": "prettier --write \"{src,test}/**/*.ts\"",
+    "lint": "eslint ./src/**/*.ts --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "prepare": "husky install",
+    "release": "standard-version --no-verify",
+    "postrelease": "git push --tags --no-verify"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@faker-js/faker": "^7.1.0",
+    "@parcel/packager-ts": "2.5.0",
+    "@parcel/transformer-typescript-types": "2.5.0",
+    "@types/jest": "^27.4.1",
+    "@types/node": "^17.0.28",
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0",
+    "eslint": "^8.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "jest": "^27.1.4",
+    "parcel": "^2.5.0",
+    "prettier": "2.6.2",
+    "rimraf": "^3.0.2",
+    "standard-gi": "^9.3.2",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.7.0",
+    "typescript": ">=3.0.0"
+  }
+}
